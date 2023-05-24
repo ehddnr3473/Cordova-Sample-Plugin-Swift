@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.yeolmok.samplepluginswift" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>CordovaSamplePluginSwift</name>
+    <js-module name="CordovaSamplePluginSwift" src="www/CordovaSamplePluginSwift.js">
+        <clobbers target="cordova.plugins.CordovaSamplePluginSwift" />
+    </js-module>
+</plugin>
