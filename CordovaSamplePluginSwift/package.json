@@ -1,0 +1,25 @@
+{
+  "name": "com.yeolmok.samplepluginswift",
+  "version": "0.0.1",
+  "description": "cordova sample plugin using swift",
+  "cordova": {
+    "id": "com.yeolmok.samplepluginswift",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ehddnr3473/Cordova-Sample-Plugin-Swift.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "yeolmok",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ehddnr3473/Cordova-Sample-Plugin-Swift/issues"
+  },
+  "homepage": "https://github.com/ehddnr3473/Cordova-Sample-Plugin-Swift#readme"
+}
