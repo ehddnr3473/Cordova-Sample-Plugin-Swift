@@ -10,6 +10,10 @@ final class CordovaSamplePluginSwift: CDVPlugin {
     @objc(greet:)
     func greet(command: CDVInvokedUrlCommand) {
         print("Received successfully.")
+        print("callbackId: \(command.callbackId as String)")
+        print("className: \(command.className as String)")
+        print("methodName: \(command.methodName as String)")
+        print("arguments: \(String(describing: command.arguments))")
         
         let result = CDVPluginResult(status: CDVCommandStatus_OK, messageAs: "Hi, I'm a Yeolmok on iOS platform")
         self.commandDelegate.send(result, callbackId: command.callbackId)
