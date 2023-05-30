@@ -11,5 +11,9 @@
             </feature>
         </config-file>
         <source-file src="src/ios/CordovaSamplePluginSwift.swift" />
+        <source-file src="src/ios/PasswordViewController.swift" />
+        <source-file src="src/ios/KeyPadViewController.swift" />
+        <resource-file src="Password.storyboard" />
+        <resource-file src="KeyPad.storyboard" />
     </platform>
 </plugin>

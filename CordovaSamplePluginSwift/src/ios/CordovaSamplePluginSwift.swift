@@ -43,4 +43,31 @@ final class CordovaSamplePluginSwift: CDVPlugin {
             self?.commandDelegate.send(result, callbackId: command.callbackId)
         }
     }
+    
+    @objc(presentKeyPadView:)
+    func presentKeyPadView(command: CDVInvokedUrlCommand) {
+        let storyboard = UIStoryboard(name: "Password", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier: "Password") as? PasswordViewController else { return }
+        viewController.modalPresentationStyle = .formSheet
+        viewController.callbackId = command.callbackId
+        viewController.delegate = self
+        self.viewController.present(viewController, animated: true)
+    }
+}
+
+// MARK: - KeyPadResultDelegate
+protocol KeyPadResultDelegate: AnyObject {
+    func sendResult(with password: String, callbackId: String)
+}
+
+extension CordovaSamplePluginSwift: KeyPadResultDelegate {
+    func sendResult(with password: String, callbackId: String) {
+        self.commandDelegate.send(
+            CDVPluginResult(
+                status: CDVCommandStatus_OK,
+                messageAs: password
+            ),
+            callbackId: callbackId
+        )
+    }
 }
