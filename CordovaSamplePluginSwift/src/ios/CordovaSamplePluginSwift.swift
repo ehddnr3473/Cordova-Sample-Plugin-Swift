@@ -44,14 +44,14 @@ final class CordovaSamplePluginSwift: CDVPlugin {
         }
     }
     
-    @objc(presentKeyPadView:)
-    func presentKeyPadView(command: CDVInvokedUrlCommand) {
+    @objc(presentPasswordView:)
+    func presentPasswordView(command: CDVInvokedUrlCommand) {
         let storyboard = UIStoryboard(name: "Password", bundle: nil)
-        guard let viewController = storyboard.instantiateViewController(withIdentifier: "Password") as? PasswordViewController else { return }
-        viewController.modalPresentationStyle = .formSheet
-        viewController.callbackId = command.callbackId
-        viewController.delegate = self
-        self.viewController.present(viewController, animated: true)
+        guard let passwordViewController = storyboard.instantiateViewController(withIdentifier: "Password") as? PasswordViewController else { return }
+        passwordViewController.modalPresentationStyle = .formSheet
+        passwordViewController.callbackId = command.callbackId
+        passwordViewController.delegate = self
+        self.viewController.present(passwordViewController, animated: true)
     }
 }
 

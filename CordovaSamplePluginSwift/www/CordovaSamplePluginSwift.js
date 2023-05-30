@@ -9,7 +9,7 @@ cordova.define("com.yeolmok.samplepluginswift.CordovaSamplePluginSwift", functio
         exec(success, error, "CordovaSamplePluginSwift", "presentModalView");
     };
 
-    exports.presentKeyPadView = function(success, error) {
-        exec(success, error, "CordovaSamplePluginSwift", "presentKeyPadView")
+    exports.presentPasswordView = function(success, error) {
+        exec(success, error, "CordovaSamplePluginSwift", "presentPasswordView")
     }
 });
